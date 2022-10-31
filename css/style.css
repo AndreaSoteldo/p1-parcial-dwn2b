@@ -1,0 +1,486 @@
+:root {
+    --fuenteParrafos: 'Poppins Regular';
+    --rojo: #C02733;
+    --gris: #2A2928;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+@font-face {
+    font-family: "Poppins Black";
+    src: url('../Tipografías/Poppins-Black.ttf');
+    /* src: url('../Tipografías/Poppins-Bold.ttf');
+    src: url('../Tipografías/Poppins-Medium.ttf');
+    src: url('../Tipografías/Poppins-Thin.ttf');
+    src: url('../Tipografías/Poppins-Light.ttf');
+    src: url('../Tipografías/Poppins-Regular.ttf'); */
+}
+@font-face {
+    font-family: "Poppins Medium";
+    src: url('../Tipografías/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: "Poppins Regular";
+    src: url('../Tipografías/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: "Poppins Light";
+    src: url('../Tipografías/Poppins-Light.ttf');
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    color: var(--blanco);
+}
+
+/** Globales **/
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuenteParrafos);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.d-none{
+    display: none !important;
+}
+
+/** presentacion **/
+.header,
+.footer {
+    min-height: 30vh;
+}
+
+.main{
+    min-height: 40vh;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   font-size: 3rem;
+   font-weight: bold;
+}
+.titulo{
+    color: var(--rojo);
+}
+
+.body{
+    background-color: var(--negro);
+}
+
+.main{
+    display: flex;
+    background-image: url('../imagenes/logo_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:35.6%;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-presentacion {
+    font-weight: 400;
+    color: var(--blanco);
+    font-size: 9rem;
+    font-family: "Poppins Regular";
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.button-presentacion:hover {
+    transform:scale(1.1);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer span {
+    color: var(--gris);
+    font-size: 3rem;
+}
+
+/*HOME*/
+.header__home{
+    width: 80%;
+    min-height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.descripcion-estudiante,
+.email{
+    color: var(--blanco);
+    font-size: 3rem;
+    font-family: "Poppins Regular";
+}
+
+/*MAIN HOME*/
+.main__home{
+    width: 80%;
+    min-height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show__disc{
+    width: 70%;
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+.box__button{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.biblioteca{
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-family: "Poppins Regular";
+    padding: 2.5rem 3rem;
+    font-size: 3rem;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+/*BOX DISCOS*/
+.box__discos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BLOQUE 1*/
+.bloque__1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bloque__1 .mis__discos{
+    margin: 0;
+    font-size: 8rem;
+    font-family: "Poppins Light";
+    font-weight: 400;
+}
+
+.bloque__1 .cantidad__discos{
+    font-size: 3rem;
+    margin-top: .8rem;
+}
+/*BLOQUE 2*/
+
+.bloque__2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.botones{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.buscador{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.buscador input {
+    width: 100%;
+    height: 40px;
+}
+.bloque__2 .button__disc{
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-family: "Poppins Regular";
+    padding: 2rem 3.5rem;
+    font-size: 3rem;
+    border-radius: 32px;
+    cursor: pointer;
+    min-width: 390px;
+}
+
+/*Discos*/
+.bloque__3{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+.disco{
+    flex: 0 0 calc(47.9% - 0px);
+    max-width: 50%;
+    background: #2A2928;
+    padding: 3rem 5rem 6rem;
+    border-radius: 30px;
+}
+.descripcion__disco{
+    display: flex;
+    align-items: center;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+}
+.descripcion__disco .img__disco{
+    max-width: 130px;
+    margin-right: 4rem;
+}
+
+.descripcion__disco .nombre__disco{
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: .3rem;
+}
+
+.banda,
+.codigo{
+    color: #717070;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.descripcion__lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pista,
+.duracion{
+    font-size: 3rem;
+}
+
+
+.detalle__lista .lista{
+    list-style: none;
+    padding: 0;
+}
+.item__lista{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item__lista .nombre{
+    color: #717070;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+.item__lista .duracion{
+    color: var(--blanco);
+    line-height: 1.5;
+    font-size:2rem;
+}
+
+.cantidad__disco{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cantidad__disco .cantidad,
+.cantidad__disco .duracion {
+    font-size: 2.5rem;
+    color: var(--rojo);
+}
+/*FOOTER HOME*/
+
+.footer__home{
+    width: 80%;
+    min-height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.email__profesor,
+.descripcion__profesor{
+    color: var(--blanco);
+    font-size: 3rem;
+    font-family: "Poppins Regular";
+}
+
+/*MODAL*/
+
+.modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #71707062;
+
+}
+
+.contenido__modal{
+    position: relative;
+    width: 50%;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    background-color:var(--negro);
+    display: flex;
+    justify-content: space-between;
+}
+
+.cerrar__modal{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.form {
+    flex: 0 0 calc(50% - 0px);
+}
+
+.form-group label,
+.form-group input{
+    width: 100%;
+    flex: 0 0 calc(40% - 0px);
+}
+
+.form-group input {
+    color: var(--negro);
+}
+
+.submit-btn{
+    width: 100%;
+}
+
+.submit-btn,
+.add-song{
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.form-group__subgroup{
+    flex-direction: column;
+}
+
+.form-subgroup{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.canciones__agregadas{
+    flex: 0 0 calc(40% - 0px);
+    display: flex;
+    flex-direction: column;
+}
+.lista__agregadas{
+    list-style: auto;
+}
+.item__cancion{
+    color: var(--blanco);
+}
+
+.titulo__canciones{
+    color: var(--blanco);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.button-disable{
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+.boton__inicio{
+    position: fixed;
+    bottom: 5rem;
+    right: 8rem;
+}
+
+.inicio{
+    cursor: pointer;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: var(--rojo);
+    background-color: transparent;
+}
+
+.cancion-mas-larga {
+    display: block;
+    width: 100%;
+}
+

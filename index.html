@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prooyecto</title>
+    <link rel="icon" href="./imagenes/logo_icon.ico">
+    <meta name="description" content="Proyecto">
+    
+    <!-- Preload -->
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="body">
+
+    <header class="header__home">
+
+            <span class="descripcion-estudiante">Programación 1 | Parcial 1 | Soteldo, Andrea</span>
+            <a class="email" href="mailto:andrea.soteldo@davinci.edu.ar">andrea.soteldo@davinci.edu.ar</a>
+
+    </header>
+
+    <main class="main__home">
+        <div class="box__button">
+            <button 
+                class="biblioteca"
+            >
+                Mostrar Biblioteca
+            </button>
+        </div>
+        <div class="box__discos d-none">
+           <div class="bloque__1">
+                <h1 class="mis__discos">
+                    Mis discos
+                </h1>
+                <p class="cantidad__discos">
+                </p>
+           </div>
+           <div class="bloque__2">
+                <div class="botones">
+                    <button id="cargar-disco" class="button__disc">Cargar nuevo disco</button>
+                    <button id="buscar-disco" class="button__disc">Buscar por ID</button>
+                    <button id="limpiar-pantalla" class="button__disc">Limpiar pantalla</button>
+                </div>
+                <div class="buscador d-none">
+                    <input type="number" min="1" max="999" id="codigo" placeholder="Buscar por código: 1, 2, etc..." name="codigo">
+                </div>
+           </div>
+
+          <div class="modal d-none">
+            <div class="contenido__modal">
+                <button class="cerrar__modal">
+                    X
+                </button>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="disco">Nombre del album</label>
+                        <input type="text" id="disco" class="input" name="disco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor del disco</label>
+                        <input type="text" id="autor" class="input" name="autor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="codigo">Código</label>
+                        <input type="number" min="1" max="999" id="codigo" class="input" name="codigo" required>
+                    </div>
+                    <div class="form-group form-group__subgroup">
+                        <div class="form-subgroup">
+                            <label for="nombre">Nombre cancion</label>
+                            <input type="text" id="nombre" class="input" name="nombre" required>
+                        </div>
+                        <div class="form-subgroup">
+                            <label for="duracion">Duracion</label>
+                            <input type="number" min="0" max="7200" id="duracion" class="input" name="duracion">
+                        </div>
+                        <button class="add-song" type="button">Agregar canción</button>
+                    </div>
+                    <input type="submit" value="Agregar album" class="submit-btn button-disable">
+               </form>
+               <div class="canciones__agregadas">
+                    <p class="titulo__canciones">Canciones</p>
+                    <ul class="lista__agregadas">
+
+                    </ul>
+               </div>
+            </div>
+          </div>
+
+           <div class="bloque__3">
+           </div>
+        </div>
+        <div class="boton__inicio d-none">
+            <button class="inicio">
+                Inicio
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer__home">
+        <span class="descripcion__profesor">Profesor Fabrizio Caslassara</span>
+            <a class="email__profesor" href="mailto:fabrizio.caslassara@davinci.edu.ar">fabrizio.caslassara@davinci.edu.ar</a>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>
